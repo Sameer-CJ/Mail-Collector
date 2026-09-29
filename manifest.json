@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "SClom Lead Collector",
+  "version": "1.0.0",
+  "description": "Collect restaurant leads from Google Maps.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.google.com/maps/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SClom Lead Collector"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/maps/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
